@@ -1,10 +1,10 @@
-<?php namespace ProjectName\Repositories\Implementation;
+<?php namespace Manager\Repositories\Implementation;
 
-use ProjectName\Repositories\Boundary\AbstractRepository;
+use Manager\Repositories\Boundary\AbstractRepository;
 
 /**
  * Class EloquentAbstractRepository
- * @package ProjectName\Repositories\Implementation
+ * @package Manager\Repositories\Implementation
  */
 class EloquentAbstractRepository implements AbstractRepository
 {

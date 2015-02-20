@@ -1,4 +1,4 @@
-<?php namespace ProjectName\Console;
+<?php namespace Manager\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -12,7 +12,7 @@ class Kernel extends ConsoleKernel
 	 * @var array
 	 */
 	protected $commands = [
-		'ProjectName\Console\Commands\Inspire',
+		'Manager\Console\Commands\Inspire',
 	];
 
 	/**

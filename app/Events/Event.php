@@ -1,4 +1,4 @@
-<?php namespace ProjectName\Events;
+<?php namespace Manager\Events;
 
 abstract class Event
 {

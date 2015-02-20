@@ -1,4 +1,4 @@
-<?php namespace ProjectName\Providers;
+<?php namespace Manager\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -28,17 +28,17 @@ class AppServiceProvider extends ServiceProvider
 	{
 		$this->app->bind(
 			'Illuminate\Contracts\Auth\Registrar',
-			'ProjectName\Services\Registrar'
+			'Manager\Services\Registrar'
 		);
 
 		$this->app->bind(
-			'ProjectName\Repositories\Boundary\AbstractRepository',
-			'ProjectName\Repositories\Implementation\EloquentAbstractRepository'
+			'Manager\Repositories\Boundary\AbstractRepository',
+			'Manager\Repositories\Implementation\EloquentAbstractRepository'
 		);
 
 		$this->app->bind(
-			'ProjectName\Repositories\Boundary\UserRepository',
-			'ProjectName\Repositories\Implementation\EloquentUserRepository'
+			'Manager\Repositories\Boundary\UserRepository',
+			'Manager\Repositories\Implementation\EloquentUserRepository'
 		);
 	}
 

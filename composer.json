@@ -1,6 +1,6 @@
 {
-	"name": "ProjectName",
-	"description": "CompanyName ProjectName",
+	"name": "Manager",
+	"description": "AlienStream Manager",
 	"keywords": [
 		"framework",
 		"laravel"
@@ -22,7 +22,7 @@
 			"database"
 		],
 		"psr-4": {
-			"ProjectName\\": "app/"
+			"Manager\\": "app/"
 		}
 	},
 	"autoload-dev": {

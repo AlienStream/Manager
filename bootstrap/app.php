@@ -28,17 +28,17 @@ $app = new Morrislaptop\LaravelFivePackageBridges\Application(
 
 $app->singleton(
 	'Illuminate\Contracts\Http\Kernel',
-	'ProjectName\Http\Kernel'
+	'Manager\Http\Kernel'
 );
 
 $app->singleton(
 	'Illuminate\Contracts\Console\Kernel',
-	'ProjectName\Console\Kernel'
+	'Manager\Console\Kernel'
 );
 
 $app->singleton(
 	'Illuminate\Contracts\Debug\ExceptionHandler',
-	'ProjectName\Exceptions\Handler'
+	'Manager\Exceptions\Handler'
 );
 
 /*

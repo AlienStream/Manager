@@ -1,8 +1,8 @@
-<?php namespace ProjectName\Repositories\Boundary;
+<?php namespace Manager\Repositories\Boundary;
 
 /**
  * Interface UserRepository
- * @package ProjectName\Repositories\Boundary
+ * @package Manager\Repositories\Boundary
  */
 interface UserRepository extends AbstractRepository {
 

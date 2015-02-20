@@ -1,16 +1,16 @@
 {
-	"name": "ProjectName",
+	"name": "Manager",
 	"version": "1.0.0",
-	"description": "CompanyName ProjectName",
+	"description": "AlienStream Manager",
 	"main": "index.php",
 	"repository": {
 		"type": "git",
-		"url": "GitRepository"
+		"url": "https://github.com/AlienStream/Manager"
 	},
-	"author": "CompanyName",
+	"author": "AlienStream",
 	"license": "ISC",
 	"bugs": {
-		"url": "GitRepository/issues"
+		"url": "https://github.com/AlienStream/Manager/issues"
 	},
 	"homepage": "GitRepository",
 	"devDependencies": {

@@ -28,7 +28,7 @@ return [
 	|
 	*/
 
-	'model' => 'ProjectName\Domain\Implementation\User',
+	'model' => 'Manager\Domain\Implementation\User',
 
 	/*
 	|--------------------------------------------------------------------------

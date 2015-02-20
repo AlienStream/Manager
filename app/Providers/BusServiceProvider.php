@@ -1,4 +1,4 @@
-<?php namespace ProjectName\Providers;
+<?php namespace Manager\Providers;
 
 use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
@@ -16,7 +16,7 @@ class BusServiceProvider extends ServiceProvider
 	{
 		$dispatcher->mapUsing(function ($command) {
 			return Dispatcher::simpleMapping(
-				$command, 'ProjectName\Commands', 'ProjectName\Handlers\Commands'
+				$command, 'Manager\Commands', 'Manager\Handlers\Commands'
 			);
 		});
 	}

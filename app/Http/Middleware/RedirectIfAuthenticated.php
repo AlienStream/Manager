@@ -1,4 +1,4 @@
-<?php namespace ProjectName\Http\Middleware;
+<?php namespace Manager\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;

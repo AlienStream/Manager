@@ -24,8 +24,8 @@ A laravel 5 scaffold for getting work done.
 * rm -rf .git
 * git init
 * find replace GitRepository in package.json with your git repo URL
-* grep -rl 'CompanyName' ./ | xargs sed -i '' 's/CompanyName/Your Company Name/g'
-* grep -rl 'ProjectName' ./ | xargs sed -i '' 's/ProjectName/Your Project Name/g'
+* grep -rl 'AlienStream' ./ | xargs sed -i '' 's/AlienStream/Your Company Name/g'
+* grep -rl 'Manager' ./ | xargs sed -i '' 's/Manager/Your Project Name/g'
 * git remote add Your Git Repo
 * git add -A
 * git commit -m "Initial Commit"
