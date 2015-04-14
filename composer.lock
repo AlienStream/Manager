@@ -4,18 +4,21 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b18a366218ef216a529a23c10737bdfd",
+    "hash": "58aedb88466d7913bc86c2b458b684fe",
     "packages": [
         {
             "name": "AlienStream/Shared",
-            "version": "dev-develop",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:AlienStream/Shared.git",
-                "reference": "f1348c839cbf2a32b682bf541a23ca0bf8c7e21a"
+                "reference": "bfedcffe6ce74d839a7c301992387a223f36cc0d"
             },
             "require": {
                 "bugsnag/bugsnag": "2.2.*",
+                "illuminate/auth": "5.*",
+                "illuminate/contracts": "5.*",
+                "illuminate/database": "5.*",
                 "psr/log": "1.0.*@dev"
             },
             "type": "library",
@@ -33,7 +36,7 @@
                 }
             ],
             "description": "Alienstream Shared Content",
-            "time": "2015-02-20 07:15:09"
+            "time": "2015-04-13 07:33:10"
         },
         {
             "name": "bugsnag/bugsnag",
