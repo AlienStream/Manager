@@ -11,7 +11,7 @@
 |
 */
 
-$app = new Morrislaptop\LaravelFivePackageBridges\Application(
+$app = new Illuminate\Foundation\Application(
 	realpath(__DIR__.'/../')
 );
 
@@ -28,17 +28,17 @@ $app = new Morrislaptop\LaravelFivePackageBridges\Application(
 
 $app->singleton(
 	'Illuminate\Contracts\Http\Kernel',
-	'Manager\Http\Kernel'
+	'App\Http\Kernel'
 );
 
 $app->singleton(
 	'Illuminate\Contracts\Console\Kernel',
-	'Manager\Console\Kernel'
+	'App\Console\Kernel'
 );
 
 $app->singleton(
 	'Illuminate\Contracts\Debug\ExceptionHandler',
-	'Manager\Exceptions\Handler'
+	'App\Exceptions\Handler'
 );
 
 /*

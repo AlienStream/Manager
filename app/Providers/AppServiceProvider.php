@@ -1,9 +1,8 @@
-<?php namespace Manager\Providers;
+<?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
-{
+class AppServiceProvider extends ServiceProvider {
 
 	/**
 	 * Bootstrap any application services.
@@ -28,17 +27,7 @@ class AppServiceProvider extends ServiceProvider
 	{
 		$this->app->bind(
 			'Illuminate\Contracts\Auth\Registrar',
-			'Manager\Services\Registrar'
-		);
-
-		$this->app->bind(
-			'Manager\Repositories\Boundary\AbstractRepository',
-			'Manager\Repositories\Implementation\EloquentAbstractRepository'
-		);
-
-		$this->app->bind(
-			'Manager\Repositories\Boundary\UserRepository',
-			'Manager\Repositories\Implementation\EloquentUserRepository'
+			'App\Services\Registrar'
 		);
 	}
 

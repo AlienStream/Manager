@@ -1,42 +1,23 @@
-# laravel5-base
-A laravel 5 scaffold for getting work done.
+## Laravel PHP Framework
 
-## Includes
-* gulp for building js, scss and optimizing images.
-* Livereload
-* Jquery and Jquery UI
-* Bootstrap
-* Font Awesome
-* Bower for dependency management
-* Illuminate\View\ViewServiceProvider
-* Illuminate\Html\HtmlServiceProvider
-* Way\Generators\GeneratorsServiceProvider
+[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
+[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
+[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-## Getting Started
-* git clone git@github.com:letsrtfm/laravel5-base.git
-* cd into the created directory
-* composer install
-* bower install
-* npm install
-* gulp
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-## Configuration
-* rm -rf .git
-* git init
-* find replace GitRepository in package.json with your git repo URL
-* grep -rl 'AlienStream' ./ | xargs sed -i '' 's/AlienStream/Your Company Name/g'
-* grep -rl 'Manager' ./ | xargs sed -i '' 's/Manager/Your Project Name/g'
-* git remote add Your Git Repo
-* git add -A
-* git commit -m "Initial Commit"
-* git push origin master
-* change database engine in config/database and migrate if you are so inclined.
+Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
+## Official Documentation
 
-## Development
-* php artisan serve just like always :D
-* gulp watch
-* use php artisan generate to create controllers, pivots, migrations or whatever else
+Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Notes
-scss, js and images are all under resources, they will get auto built and concatinated so they should be included in all pages by default due to the layout.blade.php file
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+
+### License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

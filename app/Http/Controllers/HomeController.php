@@ -1,10 +1,6 @@
-<?php namespace Manager\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
-use Manager\Repositories\Boundary\UserRepository;
-use Manager\Domain\Implementation\User;
-
-class HomeController extends Controller
-{
+class HomeController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -17,17 +13,14 @@ class HomeController extends Controller
 	|
 	*/
 
-	protected $users;
-
 	/**
 	 * Create a new controller instance.
 	 *
 	 * @return void
 	 */
-	public function __construct(UserRepository $users)
+	public function __construct()
 	{
 		$this->middleware('auth');
-		$this->users = $users;
 	}
 
 	/**
@@ -38,11 +31,6 @@ class HomeController extends Controller
 	public function index()
 	{
 		return view('home');
-	}
-
-	public function users()
-	{
-		return $this->users->all();
 	}
 
 }
