@@ -146,6 +146,11 @@ return [
 		'Manager\Providers\EventServiceProvider',
 		'Manager\Providers\RouteServiceProvider',
 
+		/*
+		 * Vendor Service Providers
+		 */
+		'AlienStream\Domain\Service\RepositoryServiceProvider'
+
 	],
 
 	/*

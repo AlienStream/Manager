@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'HomeController@index');
 
-Route::get('home', 'HomeController@index');
+Route::resource('community', 'CommunityController');
+Route::resource('artist', 'ArtistController');
+Route::resource('genre', 'GenreController');
+Route::resource('track', 'TrackController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -24,7 +24,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Alienstream\\Domain\\": "src/"
+                    "AlienStream\\Domain\\": "src/"
                 },
                 "files": []
             },
@@ -35,7 +35,7 @@
                     "homepage": "http://letsrtfm.com"
                 }
             ],
-            "description": "Alienstream Shared Content",
+            "description": "AlienStream Shared Content",
             "time": "2015-04-13 07:33:10"
         },
         {
@@ -2950,7 +2950,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "alienstream/shared": 20
+        "AlienStream/shared": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

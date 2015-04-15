@@ -1,7 +1,25 @@
 {
-  "private": true,
-  "devDependencies": {
-    "gulp": "^3.8.8",
-    "laravel-elixir": "*"
-  }
+	"name": "Manager",
+	"version": "1.0.0",
+	"description": "AlienStream Manager",
+	"main": "index.php",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AlienStream/Manager"
+	},
+	"author": "AlienStream",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/AlienStream/Manager/issues"
+	},
+	"homepage": "GitRepository",
+	"devDependencies": {
+		"gulp": "^3.8.10",
+		"gulp-concat": "^2.4.3",
+		"gulp-livereload": "^3.3.0",
+		"gulp-minify-css": "^0.3.12",
+		"gulp-sass": "^1.3.1",
+		"gulp-sourcemaps": "^1.3.0",
+		"gulp-uglify": "^1.0.2"
+	}
 }

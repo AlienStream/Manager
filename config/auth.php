@@ -28,7 +28,7 @@ return [
 	|
 	*/
 
-	'model' => 'Manager\User',
+	'model' => 'AlienStream\Domain\Implementation\Models\User',
 
 	/*
 	|--------------------------------------------------------------------------
