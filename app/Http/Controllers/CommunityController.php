@@ -1,10 +1,11 @@
 <?php namespace Manager\Http\Controllers;
 
 use AlienStream\Domain\Contracts\Repositories\CommunityRepository;
+use AlienStream\Domain\Implementation\Models\Community;
 use AlienStream\Domain\Implementation\Models\Track;
 use Manager\Http\Requests;
 use Manager\Http\Controllers\Controller;
-
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 
 class CommunityController extends Controller {
@@ -39,7 +40,7 @@ class CommunityController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('community.community-create');
 	}
 
 	/**
@@ -47,9 +48,24 @@ class CommunityController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$input = $request->all();
+		$community = new Community();
+		$community->name = $input['name'];
+		$community->description = $input['description'];
+		$community->favorite_count = 0;
+		$community->play_count = 0;
+		if ($request->hasFile('thumbnail') && $request->file('thumbnail')->isValid() && substr($request->file('thumbnail')->getMimeType(), 0, 5) == 'image') {
+			$fileName = $community->name . '-' . (new \DateTime())->getTimestamp() .'.'. $request->file('thumbnail')->getClientOriginalExtension();
+			$request->file('thumbnail')->move('img/uploads/', $fileName);
+			$thumbnail_url = "/img/uploads/" . $fileName;
+		} else {
+			$thumbnail_url = "/img/uploads/default.jpg";
+		}
+		$community->thumbnail = $thumbnail_url;
+		$community->save();
+		return $community;
 	}
 
 	/**
@@ -60,7 +76,8 @@ class CommunityController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		return view('community.community')
+			->withCommunity($this->communities->find($id));
 	}
 
 	/**
@@ -71,7 +88,8 @@ class CommunityController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		return view('community.community-edit')
+			->withCommunity($this->communities->find($id));
 	}
 
 	/**
@@ -80,9 +98,19 @@ class CommunityController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, Request $request)
 	{
-		//
+		$input = $request->all();
+		$community = $this->communities->find($id);
+		$community->name = $input['name'];
+		$community->description = $input['description'];
+		if ($request->hasFile('thumbnail') && $request->file('thumbnail')->isValid() && substr($request->file('thumbnail')->getMimeType(), 0, 5) == 'image') {
+			$fileName = $community->name . '-' . (new \DateTime())->getTimestamp() .'.'. $request->file('thumbnail')->getClientOriginalExtension();
+			$request->file('thumbnail')->move('img/uploads/', $fileName);
+			$community->thumbnail = "/img/uploads/" . $fileName;
+		}
+		$community->save();
+		return $community;
 	}
 
 	/**

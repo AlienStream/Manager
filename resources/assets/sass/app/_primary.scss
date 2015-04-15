@@ -2,3 +2,12 @@ body {
   background-image: url('/img/space.jpg');
   background-size: cover;
 }
+
+.panel-heading {
+  height: 60px;
+  font-size: 1.5em;
+}
+
+table .actions {
+  width: 140px;
+}

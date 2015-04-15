@@ -1,6 +1,8 @@
 <?php namespace Manager\Http\Controllers;
 
 use AlienStream\Domain\Contracts\Repositories\ArtistRepository;
+use AlienStream\Domain\Implementation\Models\Artist;
+use AlienStream\Domain\Implementation\Models\User;
 use Manager\Http\Requests;
 use Manager\Http\Controllers\Controller;
 
@@ -38,7 +40,7 @@ class ArtistController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('artist.artist-create');
 	}
 
 	/**
@@ -46,9 +48,18 @@ class ArtistController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$input = $request->all();
+		$user = User::find($input['user_id']);
+		$artist = new Artist();
+		$artist->name = $input['name'];
+		$artist->thumbnail = $input['thumbnail'];
+		$artist->favorite_count = 0;
+		$artist->play_count = 0;
+		$artist->user()->associate($user);
+		$artist->save();
+		return $artist;
 	}
 
 	/**
